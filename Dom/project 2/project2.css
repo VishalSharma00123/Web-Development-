@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {}
+
+body::before {
+    background: url(https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg?w=1060&t=st=1688482580~exp=1688483180~hmac=27ee954ad8fc26bf71afc6cbe3a73e201a85c5fb5271b320980359ec8840416b) no-repeat;
+    z-index: -1;
+    content: "";
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-size: 100%;
+}
+
+#open-btn {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    width: 25vw;
+    height: 9vh;
+    font-size: 7rem;
+    background: transparent;
+    color: white;
+    border: 7px solid white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 0 10px black;
+    transition: .5s;
+}
+
+#open-btn:hover {
+    background: white;
+    color: black;
+}
+
+#modal {
+    background-color: #fff;
+    width: 10%;
+    position: absolute;
+    top: 25%;
+    left: 26%;
+    transform: translate(-50%, -50%);
+    width: 30rem;
+    height: 12rem;
+    border-radius: 14px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 4rem;
+    animation-name: myanimation;
+    animation-duration: .4s;
+    animation-direction: normal;
+    animation-timing-function: linear;
+}
+
+#close-btn {
+    cursor: pointer;
+    font-size: 6rem;
+    color: red;
+}
+
+#modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+@keyframes myanimation {
+    from {
+        top: 0;
+        opacity: 0;
+    }
+
+    to {
+        top: 30%;
+        opacity: 1;
+    }
+}
