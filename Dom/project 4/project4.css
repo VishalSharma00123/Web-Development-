@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+
+}
+
+body::before {
+    background: url(https://images.unsplash.com/photo-1562016600-ece13e8ba570?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=438&q=80) no-repeat center;
+    content: '';
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    background-size: 100%;
+    position: absolute;
+}
+
+.container {
+    position: absolute;
+    top: 30%;
+    text-align: center;
+    background: white;
+    border-radius: 3rem;
+    width: 78rem;
+    padding: 5rem;
+    box-shadow: 0 0 10px;
+}
+
+#timer {
+    font-size: 8rem;
+    margin: 75px 0;
+}
+
+.fa-solid {
+    font-size: 6rem;
+}
+
+#play {
+    color: white;
+    background: red;
+    padding: 18px;
+    border: none;
+}
+
+#reset {
+    color: white;
+    background: green;
+    padding: 18px;
+    border: none;
+}
+
+#pause {
+    color: orange;
+}
